@@ -201,6 +201,7 @@ export class MemStorage implements IStorage {
         servicesAr: ['حلويات تقليدية', 'كعك الأعراس', 'بقلاوة', 'مقروض'],
         location: 'Blida',
         phone: '+213 555 567 890',
+        email: 'nadia.hamidi@example.com',
         priceRange: '$$',
         rating: 4.9,
         reviewCount: 143,
@@ -265,7 +266,13 @@ export class MemStorage implements IStorage {
 
   async createCategory(insertCategory: InsertCategory): Promise<Category> {
     const id = randomUUID();
-    const category: Category = { ...insertCategory, id };
+    const category: Category = {
+      ...insertCategory,
+      id,
+      descriptionEn: insertCategory.descriptionEn ?? null,
+      descriptionFr: insertCategory.descriptionFr ?? null,
+      descriptionAr: insertCategory.descriptionAr ?? null,
+    };
     this.categories.set(id, category);
     return category;
   }
@@ -308,11 +315,26 @@ export class MemStorage implements IStorage {
   async createArtisan(insertArtisan: InsertArtisan): Promise<Artisan> {
     const id = randomUUID();
     const artisan: Artisan = {
-      ...insertArtisan,
       id,
       rating: 0,
       reviewCount: 0,
       featured: 0,
+      email: insertArtisan.email ?? null,
+      nameEn: insertArtisan.nameEn,
+      nameFr: insertArtisan.nameFr,
+      nameAr: insertArtisan.nameAr,
+      categoryId: insertArtisan.categoryId,
+      bioEn: insertArtisan.bioEn,
+      bioFr: insertArtisan.bioFr,
+      bioAr: insertArtisan.bioAr,
+      servicesEn: Array.isArray(insertArtisan.servicesEn) ? insertArtisan.servicesEn : [],
+      servicesFr: Array.isArray(insertArtisan.servicesFr) ? insertArtisan.servicesFr : [],
+      servicesAr: Array.isArray(insertArtisan.servicesAr) ? insertArtisan.servicesAr : [],
+      location: insertArtisan.location,
+      phone: insertArtisan.phone,
+      priceRange: insertArtisan.priceRange,
+      profileImage: insertArtisan.profileImage,
+      portfolioImages: Array.isArray(insertArtisan.portfolioImages) ? insertArtisan.portfolioImages : [],
     };
     this.artisans.set(id, artisan);
     return artisan;
@@ -326,6 +348,7 @@ export class MemStorage implements IStorage {
       ...insertMessage,
       id,
       createdAt: new Date().toISOString(),
+      clientPhone: insertMessage.clientPhone ?? null,
     };
     this.contactMessages.set(id, message);
     return message;
