@@ -18,6 +18,8 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
+    port: 5173,
+    host: true,
     fs: {
       strict: true,
       deny: ["**/.*"],

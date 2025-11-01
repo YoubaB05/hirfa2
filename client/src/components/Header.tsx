@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from './ThemeToggle';
+import { Logo } from './Logo';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
@@ -21,11 +22,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground font-serif text-xl font-bold">
-              ح
-            </div>
-            <span className="font-display text-xl font-bold text-foreground">
+          <Link href="/" className="flex items-center gap-2">
+            <span className="font-display text-xl font-bold text-primary">
               Hirfa
             </span>
           </Link>
