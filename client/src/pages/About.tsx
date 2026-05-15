@@ -21,7 +21,6 @@ const values = [
 const team = [
   { nameEn: 'Amina Bouzid', role: 'en', city: 'Algiers', initials: 'AB' },
   { nameEn: 'Karim Messaoudi', role: 'fr', city: 'Oran', initials: 'KM' },
-  { nameEn: 'Lina Hadjadj', role: 'ar', city: 'Constantine', initials: 'LH' },
 ];
 
 export default function About() {
