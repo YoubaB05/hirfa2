@@ -1,7 +1,8 @@
-export function GeometricPattern({ className = "" }: { className?: string }) {
+export function GeometricPattern({ className = "", style }: { className?: string, style?: React.CSSProperties }) {
   return (
     <svg
       className={className}
+      style={style}
       width="100"
       height="100"
       viewBox="0 0 100 100"

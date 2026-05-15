@@ -2,8 +2,12 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
-  ({ className, type, ...props }, ref) => {
+export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value'> {
+  value?: string | null
+}
+
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ className, type, value, ...props }, ref) => {
     // h-9 to match icon buttons and default buttons.
     return (
       <input
@@ -13,6 +17,7 @@ const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
           className
         )}
         ref={ref}
+        value={value ?? ''}
         {...props}
       />
     )

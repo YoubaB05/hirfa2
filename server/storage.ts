@@ -243,6 +243,7 @@ export class MemStorage implements IStorage {
         servicesAr: ['سباكة', 'كهرباء', 'إصلاحات منزلية', 'تركيب الأجهزة'],
         location: 'Constantine',
         phone: '+213 555 345 678',
+        email: 'karim.mansouri@example.com',
         priceRange: '$$',
         rating: 4.7,
         reviewCount: 156,
@@ -278,19 +279,19 @@ export class MemStorage implements IStorage {
       // DESIGN
       {
         id: randomUUID(),
-        nameEn: 'Rania Boucherit',
-        nameFr: 'Rania Boucherit',
-        nameAr: 'رانيا بوشريط',
-        categoryId: 'design',
-        bioEn: 'Creative graphic designer with 6 years of experience in branding, logo design, social media visuals, and Arabic calligraphy art.',
-        bioFr: 'Designer graphique créative avec 6 ans d\'expérience en branding, logos, visuels pour réseaux sociaux et calligraphie arabe.',
-        bioAr: 'مصممة جرافيك إبداعية مع 6 سنوات خبرة في تصميم الهوية التجارية والشعارات ومحتوى السوشيال ميديا والخط العربي.',
-        servicesEn: ['Logo Design', 'Brand Identity', 'Social Media Graphics', 'Arabic Calligraphy'],
-        servicesFr: ['Design de Logo', 'Identité de Marque', 'Visuels Réseaux Sociaux', 'Calligraphie Arabe'],
-        servicesAr: ['تصميم الشعار', 'هوية بصرية', 'جرافيك سوشيال ميديا', 'خط عربي'],
-        location: 'Algiers',
-        phone: '+213 555 111 222',
-        email: 'rania.design@example.com',
+        nameEn: 'Nadia Hamidi',
+        nameFr: 'Nadia Hamidi',
+        nameAr: 'نادية حميدي',
+        categoryId: 'cooking',
+        bioEn: 'Traditional pastry chef specializing in Algerian sweets and desserts. Perfect for special occasions and celebrations.',
+        bioFr: 'Pâtissière traditionnelle spécialisée dans les douceurs et desserts algériens. Parfait pour les occasions spéciales.',
+        bioAr: 'صانعة حلويات تقليدية متخصصة في الحلويات الجزائرية. مثالية للمناسبات الخاصة والاحتفالات.',
+        servicesEn: ['Traditional Sweets', 'Wedding Cakes', 'Baklava', 'Makroud'],
+        servicesFr: ['Douceurs Traditionnelles', 'Gâteaux de Mariage', 'Baklava', 'Makroud'],
+        servicesAr: ['حلويات تقليدية', 'كعك الأعراس', 'بقلاوة', 'مقروض'],
+        location: 'Blida',
+        phone: '+213 555 567 890',
+        email: 'nadia.hamidi@example.com',
         priceRange: '$$',
         rating: 4.9,
         reviewCount: 211,
@@ -303,43 +304,19 @@ export class MemStorage implements IStorage {
       },
       {
         id: randomUUID(),
-        nameEn: 'Younes Hadjab',
-        nameFr: 'Younes Hadjab',
-        nameAr: 'يونس حجاب',
-        categoryId: 'design',
-        bioEn: 'Freelance illustrator and UI/UX designer. Specializes in digital illustration, app mockups, and creative visual storytelling.',
-        bioFr: 'Illustrateur freelance et designer UI/UX. Spécialisé en illustration numérique, maquettes d\'applications et narration visuelle.',
-        bioAr: 'مصور توضيحي ومصمم UI/UX مستقل. متخصص في الرسم الرقمي والنماذج التجريبية للتطبيقات.',
-        servicesEn: ['Digital Illustration', 'UI/UX Design', 'App Mockups', 'Motion Graphics'],
-        servicesFr: ['Illustration Numérique', 'Design UI/UX', 'Maquettes d\'App', 'Motion Graphics'],
-        servicesAr: ['رسم رقمي', 'تصميم UI/UX', 'نماذج تطبيقات', 'موشن جرافيك'],
-        location: 'Oran',
-        phone: '+213 555 333 444',
-        priceRange: '$$$',
-        rating: 4.7,
-        reviewCount: 78,
-        profileImage: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Younes',
-        portfolioImages: [
-          'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600',
-        ],
-        featured: 0,
-      },
-      // TUTORING
-      {
-        id: randomUUID(),
-        nameEn: 'Samia Ferhat',
-        nameFr: 'Samia Ferhat',
-        nameAr: 'سامية فرحات',
-        categoryId: 'tutoring',
-        bioEn: 'Passionate math and science tutor with a master\'s degree in mathematics. Specializes in high school and university-level preparation.',
-        bioFr: 'Professeure passionnée en maths et sciences avec un master en mathématiques. Spécialisée en préparation lycée et université.',
-        bioAr: 'مدرّسة متحمسة في الرياضيات والعلوم بشهادة ماستر في الرياضيات. متخصصة في التحضير للثانوية والجامعة.',
-        servicesEn: ['Math Tutoring', 'Physics', 'Exam Prep (BAC)', 'University Entrance', 'Online Sessions'],
-        servicesFr: ['Cours de Maths', 'Physique', 'Préparation BAC', 'Accès Université', 'Sessions en Ligne'],
-        servicesAr: ['دروس رياضيات', 'فيزياء', 'تحضير البكالوريا', 'دخول الجامعة', 'جلسات أونلاين'],
-        location: 'Constantine',
-        phone: '+213 555 555 666',
-        email: 'samia.ferhat@example.com',
+        nameEn: 'Leila Meziane',
+        nameFr: 'Leila Meziane',
+        nameAr: 'ليلى مزيان',
+        categoryId: 'sewing',
+        bioEn: 'Young talented seamstress offering modern alterations and custom clothing at affordable prices.',
+        bioFr: 'Jeune couturière talentueuse offrant des retouches modernes et vêtements sur mesure à prix abordables.',
+        bioAr: 'خياطة شابة موهوبة تقدم تعديلات حديثة وملابس مخصصة بأسعار معقولة.',
+        servicesEn: ['Alterations', 'Custom Clothing', 'Repairs', 'Embroidery'],
+        servicesFr: ['Retouches', 'Vêtements Sur Mesure', 'Réparations', 'Broderie'],
+        servicesAr: ['تعديلات', 'ملابس مخصصة', 'إصلاحات', 'تطريز'],
+        location: 'Tlemcen',
+        phone: '+213 555 678 901',
+        email: 'leila.meziane@example.com',
         priceRange: '$',
         rating: 4.8,
         reviewCount: 164,
@@ -493,7 +470,13 @@ export class MemStorage implements IStorage {
 
   async createCategory(insertCategory: InsertCategory): Promise<Category> {
     const id = randomUUID();
-    const category: Category = { ...insertCategory, id };
+    const category: Category = {
+      ...insertCategory,
+      id,
+      descriptionEn: insertCategory.descriptionEn ?? null,
+      descriptionFr: insertCategory.descriptionFr ?? null,
+      descriptionAr: insertCategory.descriptionAr ?? null,
+    };
     this.categories.set(id, category);
     return category;
   }
@@ -536,11 +519,26 @@ export class MemStorage implements IStorage {
   async createArtisan(insertArtisan: InsertArtisan): Promise<Artisan> {
     const id = randomUUID();
     const artisan: Artisan = {
-      ...insertArtisan,
       id,
       rating: 0,
       reviewCount: 0,
       featured: 0,
+      email: insertArtisan.email ?? null,
+      nameEn: insertArtisan.nameEn,
+      nameFr: insertArtisan.nameFr,
+      nameAr: insertArtisan.nameAr,
+      categoryId: insertArtisan.categoryId,
+      bioEn: insertArtisan.bioEn,
+      bioFr: insertArtisan.bioFr,
+      bioAr: insertArtisan.bioAr,
+      servicesEn: Array.isArray(insertArtisan.servicesEn) ? insertArtisan.servicesEn : [],
+      servicesFr: Array.isArray(insertArtisan.servicesFr) ? insertArtisan.servicesFr : [],
+      servicesAr: Array.isArray(insertArtisan.servicesAr) ? insertArtisan.servicesAr : [],
+      location: insertArtisan.location,
+      phone: insertArtisan.phone,
+      priceRange: insertArtisan.priceRange,
+      profileImage: insertArtisan.profileImage,
+      portfolioImages: Array.isArray(insertArtisan.portfolioImages) ? insertArtisan.portfolioImages : [],
     };
     this.artisans.set(id, artisan);
     return artisan;
@@ -554,6 +552,7 @@ export class MemStorage implements IStorage {
       ...insertMessage,
       id,
       createdAt: new Date().toISOString(),
+      clientPhone: insertMessage.clientPhone ?? null,
     };
     this.contactMessages.set(id, message);
     return message;
