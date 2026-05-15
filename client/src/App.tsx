@@ -16,6 +16,7 @@ import Contact from "@/pages/Contact";
 import FAQ from "@/pages/FAQ";
 import Terms from "@/pages/Terms";
 import Privacy from "@/pages/Privacy";
+import Login from "@/pages/Login";
 import "./lib/i18n";
 
 function Router() {
@@ -33,6 +34,7 @@ function Router() {
           <Route path="/faq" component={FAQ} />
           <Route path="/terms" component={Terms} />
           <Route path="/privacy" component={Privacy} />
+          <Route path="/login" component={Login} />
           <Route component={NotFound} />
         </Switch>
       </main>
