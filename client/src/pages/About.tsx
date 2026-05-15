@@ -7,7 +7,7 @@ import { Heart, Users, MapPin, Star, ArrowRight, Shield, Handshake, Sparkles } f
 
 const stats = [
   { key: 'artisans', value: '1,200+', icon: Users },
-  { key: 'cities', value: '48', icon: MapPin },
+  { key: 'cities', value: '69', icon: MapPin },
   { key: 'reviews', value: '8,500+', icon: Star },
   { key: 'satisfaction', value: '98%', icon: Heart },
 ];

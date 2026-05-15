@@ -96,7 +96,7 @@ const resources = {
         storyTitle: 'From Tradition to Digital',
         storyP1: 'Hirfa — meaning "craft" in Arabic — was founded in 2024 with a mission to modernize how Algerians connect with skilled artisans. In a country rich with centuries of craftsmanship tradition, we saw talented people working without reach and clients struggling to find reliable help.',
         storyP2: 'We built a platform that celebrates the artisan: the home cook who learned her recipes from her grandmother, the seamstress who embroiders traditional dresses by hand, the repair technician who can fix anything in the house. These are the pillars of Algerian neighborhoods.',
-        storyP3: 'Today, Hirfa connects thousands of clients with verified artisans across 48 wilayas of Algeria, supporting economic inclusion — especially for women working from home.',
+        storyP3: 'Today, Hirfa connects thousands of clients with verified artisans across 69 wilayas of Algeria, supporting economic inclusion — especially for women working from home.',
         valuesTitle: 'What We Stand For',
         values: {
           trust: {
@@ -184,7 +184,7 @@ const resources = {
           },
           areas: {
             q: 'Which regions of Algeria does Hirfa cover?',
-            a: 'Hirfa currently covers artisans from all 48 wilayas of Algeria, with the highest concentration in major cities including Algiers, Oran, Constantine, Annaba, and Blida. We are continuously expanding our artisan network.',
+            a: 'Hirfa currently covers artisans from all 69 wilayas of Algeria, with the highest concentration in major cities including Algiers, Oran, Constantine, Annaba, and Blida. We are continuously expanding our artisan network.',
           },
         },
       },
@@ -371,7 +371,7 @@ const resources = {
         storyTitle: 'De la Tradition au Numérique',
         storyP1: 'Hirfa — signifiant "métier" en arabe — a été fondée en 2024 avec pour mission de moderniser la façon dont les Algériens se connectent avec des artisans qualifiés. Dans un pays riche de siècles de tradition artisanale, nous avons vu des personnes talentueuses travailler sans visibilité.',
         storyP2: 'Nous avons construit une plateforme qui célèbre l\'artisan : la cuisinière qui a appris ses recettes de sa grand-mère, la couturière qui brode des robes traditionnelles à la main, le technicien de réparation qui peut tout réparer dans la maison.',
-        storyP3: 'Aujourd\'hui, Hirfa connecte des milliers de clients avec des artisans vérifiés dans les 48 wilayas d\'Algérie, soutenant l\'inclusion économique — notamment pour les femmes travaillant à domicile.',
+        storyP3: 'Aujourd\'hui, Hirfa connecte des milliers de clients avec des artisans vérifiés dans les 69 wilayas d\'Algérie, soutenant l\'inclusion économique — notamment pour les femmes travaillant à domicile.',
         valuesTitle: 'Nos Valeurs',
         values: {
           trust: {
@@ -459,7 +459,7 @@ const resources = {
           },
           areas: {
             q: 'Quelles régions d\'Algérie Hirfa couvre-t-il ?',
-            a: 'Hirfa couvre actuellement des artisans de toutes les 48 wilayas d\'Algérie, avec la plus forte concentration dans les grandes villes comme Alger, Oran, Constantine, Annaba et Blida.',
+            a: 'Hirfa couvre actuellement des artisans de toutes les 69 wilayas d\'Algérie, avec la plus forte concentration dans les grandes villes comme Alger, Oran, Constantine, Annaba et Blida.',
           },
         },
       },
@@ -592,7 +592,7 @@ const resources = {
         storyTitle: 'من التقاليد إلى الرقمي',
         storyP1: 'حرفة — تعني "الصنعة" بالعربية — تأسست عام 2024 بمهمة تحديث طريقة تواصل الجزائريين مع الحرفيين المهرة. في بلد غني بقرون من تقاليد الحرفية، رأينا أشخاصاً موهوبين يعملون دون وصول.',
         storyP2: 'بنينا منصة تحتفي بالحرفي: الطباخة التي تعلمت وصفاتها من جدتها، الخياطة التي تطرز الأفرحة التقليدية يدوياً، تقني الإصلاح الذي يستطيع إصلاح أي شيء في المنزل.',
-        storyP3: 'اليوم، تربط حرفة آلاف العملاء بالحرفيين المعتمدين عبر 48 ولاية من الجزائر، داعمةً الإدماج الاقتصادي — خاصةً للنساء العاملات من المنزل.',
+        storyP3: 'اليوم، تربط حرفة آلاف العملاء بالحرفيين المعتمدين عبر 69 ولاية من الجزائر، داعمةً الإدماج الاقتصادي — خاصةً للنساء العاملات من المنزل.',
         valuesTitle: 'ما نمثله',
         values: {
           trust: {
@@ -680,7 +680,7 @@ const resources = {
           },
           areas: {
             q: 'ما مناطق الجزائر التي تغطيها حرفة؟',
-            a: 'تغطي حرفة حالياً حرفيين من جميع الولايات الـ48 للجزائر، مع أعلى تركيز في المدن الكبرى بما في ذلك الجزائر العاصمة ووهران وقسنطينة وعنابة والبليدة.',
+            a: 'تغطي حرفة حالياً حرفيين من جميع الولايات الـ69 للجزائر، مع أعلى تركيز في المدن الكبرى بما في ذلك الجزائر العاصمة ووهران وقسنطينة وعنابة والبليدة.',
           },
         },
       },
