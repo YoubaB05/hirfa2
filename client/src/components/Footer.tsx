@@ -9,15 +9,16 @@ export function Footer() {
   const { t } = useTranslation();
 
   const footerLinks = {
-    services: [
+    explore: [
       { label: t('nav.artisans'), href: '/artisans' },
       { label: t('nav.categories'), href: '/categories' },
+      { label: t('nav.about'), href: '/about' },
     ],
     support: [
-      { label: t('footer.contact'), href: '#' },
-      { label: t('footer.faq'), href: '#' },
-      { label: t('footer.terms'), href: '#' },
-      { label: t('footer.privacy'), href: '#' },
+      { label: t('footer.contact'), href: '/contact' },
+      { label: t('footer.faq'), href: '/faq' },
+      { label: t('footer.terms'), href: '/terms' },
+      { label: t('footer.privacy'), href: '/privacy' },
     ],
   };
 
@@ -30,7 +31,7 @@ export function Footer() {
 
   return (
     <footer className="relative border-t bg-card text-card-foreground">
-      <div className="absolute inset-0 overflow-hidden opacity-50">
+      <div className="absolute inset-0 overflow-hidden opacity-50 pointer-events-none">
         <GeometricPattern className="absolute top-10 left-10 h-24 w-24 text-primary" />
         <GeometricPattern className="absolute bottom-10 right-10 h-24 w-24 text-primary" />
       </div>
@@ -47,7 +48,7 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               {t('footer.aboutText')}
             </p>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {socialLinks.map(({ Icon, href, label }) => (
                 <Button
                   key={label}
@@ -65,9 +66,9 @@ export function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-display text-lg font-semibold">{t('footer.services')}</h3>
+            <h3 className="font-display text-lg font-semibold">{t('footer.explore')}</h3>
             <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
+              {footerLinks.explore.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
                     <Button variant="link" className="h-auto p-0 text-sm text-muted-foreground hover:text-foreground">
@@ -84,9 +85,11 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
-                  <Button variant="link" className="h-auto p-0 text-sm text-muted-foreground hover:text-foreground">
-                    {link.label}
-                  </Button>
+                  <Link href={link.href}>
+                    <Button variant="link" className="h-auto p-0 text-sm text-muted-foreground hover:text-foreground">
+                      {link.label}
+                    </Button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -111,8 +114,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2025 Hirfa. Supporting 1000+ {t('footer.artisans')}.</p>
+        <div className="mt-12 border-t pt-8 flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground">
+          <p>© 2025 Hirfa. {t('footer.rights')}</p>
+          <div className="flex gap-4">
+            <Link href="/terms">
+              <Button variant="link" className="h-auto p-0 text-xs text-muted-foreground">{t('footer.terms')}</Button>
+            </Link>
+            <Link href="/privacy">
+              <Button variant="link" className="h-auto p-0 text-xs text-muted-foreground">{t('footer.privacy')}</Button>
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
