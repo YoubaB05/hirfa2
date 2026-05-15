@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from './ThemeToggle';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogIn } from 'lucide-react';
 import { useState } from 'react';
 
 export function Header() {
@@ -53,6 +53,12 @@ export function Header() {
             <div className="hidden md:flex items-center gap-2">
               <LanguageSwitcher />
               <ThemeToggle />
+              <Link href="/login">
+                <Button variant="outline" className="gap-2" data-testid="button-login">
+                  <LogIn className="h-4 w-4" />
+                  {t('nav.login')}
+                </Button>
+              </Link>
             </div>
 
             <Button
@@ -84,6 +90,12 @@ export function Header() {
             <div className="flex items-center gap-2 pt-2 border-t">
               <LanguageSwitcher />
               <ThemeToggle />
+              <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="outline" className="gap-2" data-testid="button-mobile-login">
+                  <LogIn className="h-4 w-4" />
+                  {t('nav.login')}
+                </Button>
+              </Link>
             </div>
           </div>
         )}
