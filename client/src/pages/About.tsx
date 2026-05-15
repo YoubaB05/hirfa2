@@ -19,8 +19,8 @@ const values = [
 ];
 
 const team = [
-  { nameEn: 'Amina Bouzid', role: 'en', city: 'Algiers', initials: 'AB' },
-  { nameEn: 'Karim Messaoudi', role: 'fr', city: 'Oran', initials: 'KM' },
+  { nameEn: 'Bettayeb Hiba Ghofrane', role: 'en', city: 'Tlemcen', initials: 'BH' },
+  { nameEn: 'Benbada Ayoub', role: 'fr', city: 'Algiers', initials: 'BA' },
 ];
 
 export default function About() {
@@ -135,7 +135,7 @@ export default function About() {
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">{t('about.teamSubtitle')}</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 max-w-2xl mx-auto">
             {team.map((member) => (
               <Card key={member.nameEn} className="p-6 text-center space-y-3" data-testid={`card-team-${member.initials.toLowerCase()}`}>
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary mx-auto font-display text-2xl font-bold">
