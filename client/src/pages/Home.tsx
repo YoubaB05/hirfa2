@@ -5,7 +5,11 @@ import { CategoryCard } from '@/components/CategoryCard';
 import { ArtisanCard } from '@/components/ArtisanCard';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import { ChefHat, Scissors, Wrench, Sparkles, ArrowRight } from 'lucide-react';
+import {
+  ChefHat, Scissors, Wrench, Sparkles,
+  Palette, BookOpen, Flower2, Monitor,
+  ArrowRight
+} from 'lucide-react';
 import { Artisan, Category } from '@shared/schema';
 
 const categoryIcons: Record<string, any> = {
@@ -13,6 +17,10 @@ const categoryIcons: Record<string, any> = {
   sewing: Scissors,
   repairs: Wrench,
   cleaning: Sparkles,
+  design: Palette,
+  tutoring: BookOpen,
+  beauty: Flower2,
+  tech: Monitor,
 };
 
 export default function Home() {
@@ -80,12 +88,21 @@ export default function Home() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
                 {t('hero.featured')}
               </h2>
+              <p className="text-muted-foreground">{t('hero.featuredSubtitle')}</p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featuredArtisans.map((artisan) => (
                 <ArtisanCard key={artisan.id} artisan={artisan} />
               ))}
+            </div>
+
+            <div className="mt-10 text-center">
+              <Link href="/artisans">
+                <Button variant="outline" className="gap-2" data-testid="button-see-all-talents">
+                  {t('hero.seeAll')} <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

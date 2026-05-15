@@ -16,7 +16,13 @@ export function Header() {
     { href: '/', label: t('nav.home') },
     { href: '/artisans', label: t('nav.artisans') },
     { href: '/categories', label: t('nav.categories') },
+    { href: '/about', label: t('nav.about') },
   ];
+
+  const isActive = (href: string) => {
+    if (href === '/') return location === '/';
+    return location.startsWith(href);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
@@ -32,8 +38,8 @@ export function Header() {
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
                 <Button
-                  variant={location === item.href ? 'secondary' : 'ghost'}
-                  data-testid={`link-nav-${item.label.toLowerCase()}`}
+                  variant={isActive(item.href) ? 'secondary' : 'ghost'}
+                  data-testid={`link-nav-${item.href.replace('/', '') || 'home'}`}
                 >
                   {item.label}
                 </Button>
@@ -45,6 +51,12 @@ export function Header() {
             <div className="hidden md:flex items-center gap-2">
               <LanguageSwitcher />
               <ThemeToggle />
+              <Link href="/login">
+                <Button variant="outline" className="gap-2" data-testid="button-login">
+                  <LogIn className="h-4 w-4" />
+                  {t('nav.login')}
+                </Button>
+              </Link>
             </div>
 
             <Button
@@ -64,10 +76,10 @@ export function Header() {
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
                 <Button
-                  variant={location === item.href ? 'secondary' : 'ghost'}
+                  variant={isActive(item.href) ? 'secondary' : 'ghost'}
                   className="w-full justify-start"
                   onClick={() => setMobileMenuOpen(false)}
-                  data-testid={`link-mobile-${item.label.toLowerCase()}`}
+                  data-testid={`link-mobile-${item.href.replace('/', '') || 'home'}`}
                 >
                   {item.label}
                 </Button>
@@ -76,6 +88,12 @@ export function Header() {
             <div className="flex items-center gap-2 pt-2 border-t">
               <LanguageSwitcher />
               <ThemeToggle />
+              <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="outline" className="gap-2" data-testid="button-mobile-login">
+                  <LogIn className="h-4 w-4" />
+                  {t('nav.login')}
+                </Button>
+              </Link>
             </div>
           </div>
         )}
